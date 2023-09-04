@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "TransactionIndex";
+}
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/Transaction.js"></script>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Transaction Form</h4>
+        <form class="row g-3">
+            
+                <input type="hidden" id="hdnTransID" />
+
+                <label>Item Id</label>
+                <input type="text" id="txtItemID" class="form-control" placeholder="Enter item Id">
+                <br />
+                <label> Transaction Type </label>
+                <input type="text" id="txtTransType" class="form-control" placeholder="Enter I for Issue or R for Received" />
+
+                <br />
+                <label>Transaction Qty</label>
+                <input type="text" id="txtTransQty" class="form-control" placeholder="Enter Transaction Quantity" />
+                <br />
+                <label>Select Transaction Date</label>
+                <input type="datetime-local" id="txtTransDate" class="form-control" />
+                <br />
+                <div class="text-center">
+                    <input type="button" value="submit" class="btn btn-primary" onclick="SaveTrans()" />
+                </div>
+            
+        </form>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+            <centre>
+                <div>
+                    <table id="Trans" class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>TransId</th>
+                                <th>ItemId</th>
+                                <th>Transaction Type</th>
+                                <th>Transaction Qty</th>
+                                <th>TransactionDate</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </centre>
+

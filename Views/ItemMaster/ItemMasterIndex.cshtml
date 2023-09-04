@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "ItemMasterIndex";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/ItemMaster.js"></script>
+
+
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">ItemMaster Form</h4>
+        <form class="row g-3">
+
+            <input type="hidden" id="hdnItemID" />
+
+            <label>Enter Item Description</label>
+            <textarea id="txtItemDescr" class="form-control" placeholder="Enter item Description"></textarea>
+            <br />
+            <label>Enter Balance Quantity</label>
+            <input type="text" id="txtBalQty" class="form-control" placeholder="Enter Balance Quantity" />
+            <br />
+            <label>Select Created Date</label>
+            <input type="datetime-local" id="txtCreatedOn" class="form-control" />
+            <br />
+
+
+
+            <div class="text-center">
+                <input type="button" value="submit" class="btn btn-primary" onclick="SaveItem()" />
+            </div>
+
+        </form>
+    </div>
+</div>
+<br />
+<br />
+
+<div>
+    <center>
+        <table id="tblItem" class="table table-hover table-bordered" >
+            <thead>
+                <tr>
+                    <th>ItemID</th>
+                    <th>Item Description</th>
+                    <th>Bal Qty</th>
+                    <th>CreatedOn</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+            <tbody></tbody>
+
+        </table>
+    </center>
+</div>
+
